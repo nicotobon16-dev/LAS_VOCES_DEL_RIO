@@ -20,7 +20,6 @@
             color: #333;
         }
 
-        /* --- Contenedor Global del Río (Desde el tope hasta el final) --- */
         .page-wrapper {
             position: relative;
             width: 100%;
@@ -34,7 +33,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%; /* Cubre toda la página de inicio a fin */
+            height: 100%;
             z-index: 1;
             pointer-events: none;
         }
@@ -43,7 +42,7 @@
             fill: none;
             stroke: var(--comic-outline);
             stroke-width: 210;
-            stroke-linecap: butt;
+            stroke-linecap: round;
             stroke-linejoin: round;
         }
 
@@ -51,11 +50,10 @@
             fill: none;
             stroke: url(#riverGradient);
             stroke-width: 190;
-            stroke-linecap: butt;
+            stroke-linecap: round;
             stroke-linejoin: round;
         }
 
-        /* --- Contenido Superior --- */
         .header {
             padding: 50px 20px;
             z-index: 20;
@@ -103,7 +101,6 @@
             position: relative;
         }
 
-        /* --- Emojis (2 de cada lado) --- */
         .people-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -147,11 +144,10 @@
             padding-top: 10px;
         }
 
-        /* --- Elementos del Río (Zigzag) --- */
         .river-content-area {
             position: relative;
             width: 100%;
-            height: 4800px; /* Longitud del trayecto */
+            height: 4800px;
             z-index: 10;
         }
 
@@ -174,6 +170,8 @@
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
         }
 
+        audio { width: 100%; margin-top: 10px; }
+
         /* Posiciones Zigzag */
         #v1 { top: 100px; left: 10%; }
         #v2 { top: 600px; right: 10%; }
@@ -186,7 +184,6 @@
         #a7 { top: 3500px; left: 15%; }
         #a8 { top: 3900px; right: 15%; }
 
-        /* --- Conclusión Final --- */
         .footer-conclusion {
             margin-top: -100px;
             padding-bottom: 80px;
@@ -204,7 +201,7 @@
             border: 4px solid #fff;
             max-width: 650px;
             box-shadow: 12px 12px 0px #000;
-        
+        }
     </style>
 </head>
 <body>
@@ -227,7 +224,9 @@
 
         <div class="audio-intro">
             <strong>🎙️ Escucha: "Yo nací aquí..."</strong><br>
-            <audio controls><source src="audios/Introducción Audio limpio.mp3"></audio>
+            <audio controls>
+                <source src="audios/Introducción%20Audio%20limpio.mp3" type="audio/mpeg">
+            </audio>
         </div>
         
         <div class="intro-section">
@@ -279,35 +278,31 @@
 
         <div class="audio-zigzag" id="a1">
             <strong>🎙️ Testimonio 1</strong>
-            <audio controls><source src="audios/Señor%20Juan%20recorte%20(Auri)%20FINAL%20ESTE%20ES%20EL%20BUENO%20PTM.mp3"type="audio/mpeg"></audio>
+            <audio controls><source src="audios/Señor%20Juan%20recorte%20(Auri)%20FINAL%20ESTE%20ES%20EL%20BUENO%20PTM.mp3" type="audio/mpeg"></audio>
         </div>
         <div class="audio-zigzag" id="a2">
             <strong>🎙️ Testimonio 2</strong>
-            <audio controls><source src="audios/Piedra%20entrevista%20audio%20recortado%20Y%20LIMPIADO%20HIJOS%20DE%20SU%20COLA.mp3"type="audio/mpeg"></audio>
+            <audio controls><source src="audios/Piedra%20entrevista%20audio%20recortado%20Y%20LIMPIADO%20HIJOS%20DE%20SU%20COLA.mp3" type="audio/mpeg"></audio>
         </div>
         <div class="audio-zigzag" id="a3">
             <strong>🎙️ Testimonio 3</strong>
-            <audio controls><source src="audios/Señora%20Anónima%20enfermedades%20limpio%20alv.mp3"type="audio/mpeg"></audio>
+            <audio controls><source src="audios/Señora%20Anónima%20enfermedades%20limpio%20alv.mp3" type="audio/mpeg"></audio>
         </div>
         <div class="audio-zigzag" id="a4">
             <strong>🎙️ Testimonio 4</strong>
-            <audio controls><source src="audios/Glorinella%20introducción%20presa%20Tejocote%20limpiado.mp3"type="audio/mpeg"></audio>
+            <audio controls><source src="audios/Glorinella%20introducción%20presa%20Tejocote%20limpiado.mp3" type="audio/mpeg"></audio>
         </div>
         <div class="audio-zigzag" id="a5">
             <strong>🎙️ Testimonio 5</strong>
-            <audio controls><source src="audios/Glorinella%20niña%20enferma%201.mp3"type="audio/mpeg"></audio>
+            <audio controls><source src="audios/Glorinella%20niña%20enferma%201.mp3" type="audio/mpeg"></audio>
         </div>
         <div class="audio-zigzag" id="a6">
             <strong>🎙️ Testimonio 6</strong>
-            <audio controls><source src="audios/Glorinella%202%20Ropa%20y%20olor%20del%20río%20.mp3"type="audio/mpeg"></audio>
+            <audio controls><source src="audios/Glorinella%202%20Ropa%20y%20olor%20del%20río%20.mp3" type="audio/mpeg"></audio>
         </div>
         <div class="audio-zigzag" id="a7">
             <strong>🎙️ Testimonio 7</strong>
-            <audio controls><source src="audios/Glorinella%203%20ropa%20sucia%20conclusión%20final.mp3"type="audio/mpeg"></audio>
-        </div>
-        <div class="audio-zigzag" id="a8">
-            <strong>🎙️ Testimonio 8</strong>
-            <audio controls><source src="audio8.mp3"></audio>
+            <audio controls><source src="audios/Glorinella%203%20ropa%20sucia%20conclusión%20final.mp3" type="audio/mpeg"></audio>
         </div>
     </div>
 
@@ -318,6 +313,5 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
